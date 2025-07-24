@@ -29,3 +29,57 @@ ul li {
   list-style: none;
   margin: 5px;
 }
+#fortune-box {
+  margin: 20px auto;
+  min-height: 60px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
+/* Button row layout */
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.color-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.color-btn:hover {
+  transform: scale(1.1);
+}
+
+.font-color {
+  background-color: #f54242; 
+}
+
+.bg-color {
+  background-color: #42f554; 
+}
+
+.border-color {
+  background-color: #4287f5;
+}
+
+.font-style {
+  background-color: #f5a142; 
+}
+.button-row {
+  display: flex;               
+  justify-content: center;     
+  align-items: center;         
+  gap: 10px;                   
+  margin: 20px auto;         
+  width: max-content;          
+}

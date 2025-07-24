@@ -11,14 +11,16 @@
     <a href="stopwatch.html">Stopwatch</a>
     <a href="todo.html">To-Do List</a>
   </nav>
-  <h2>Fortune Generator</h2>
-  <div id="fortune-box"></div>
-  <div>
-    <button onclick="changeFontColor()">Font Color</button>
-    <button onclick="changeBgColor()">Background Color</button>
-    <button onclick="changeBorderColor()">Border Color</button>
-    <button onclick="changeFont()">Font Style</button>
-  </div>
+<h2>Fortune Generator</h2>
+<div id="fortune-box"></div>
+
+<div class="button-row">
+  <button onclick="changeFontColor()" class="color-btn font-color"></button>
+  <button onclick="changeBgColor()"   class="color-btn bg-color"></button>
+  <button onclick="changeBorderColor()" class="color-btn border-color"></button>
+  <button onclick="changeFont()"      class="color-btn font-style"></button>
+</div>
+
   <script src="js/fortune.js"></script>
 </body>
 </html>

@@ -18,11 +18,17 @@ function renderTask(task) {
   const ul = document.getElementById('taskList');
   const li = document.createElement('li');
   const checkbox = document.createElement('input');
+  const textBox= document.createElement('span')
+  textBox.textContent=task.text
+  if(task.completed){
+    textBox.style.textDecoration='line-through'
+  }
   checkbox.type = 'checkbox';
   checkbox.checked = task.completed;
   checkbox.onchange = () => {
     task.completed = checkbox.checked;
     localStorage.setItem('tasks', JSON.stringify(tasks));
+    textBox.style.textDecoration=checkbox.checked?'line-through':'none';
   };
   const deleteBtn = document.createElement('button');
   deleteBtn.textContent = 'Delete';
@@ -32,7 +38,7 @@ function renderTask(task) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   };
   li.appendChild(checkbox);
-  li.appendChild(document.createTextNode(task.text));
+  li.appendChild(textBox);
   li.appendChild(deleteBtn);
   ul.appendChild(li);
 }
